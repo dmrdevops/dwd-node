@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@900&family=Big+Shoulders+Text&display=swap');
+
+/* Core Elements */
+:root {
+  --main-text-color: whitesmoke;
+  --fontfam: 'Exo 2', sans-serif;
+  --paragraph-font-size: 2.25rem;
+  --project-color: #222831;
+  --about-me-color: linear-gradient(90deg, rgba(75,77,80,1) 10%, rgb(50, 53, 59) 35%);;
+  --cert-and-triangle-color: #222831;
+  --calc-maxViewport: 3860;
+  --calc-minViewport: 250;
+  --calc-minPix: 250px;
+  --section-padding: calc(50px + (80 - 50) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))))
+                     calc(20px + (20 - 20) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+}
+
+html {
+  /* font-size: 10px; */
+  /* width: 100vw; Unnecessary? */
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/main-background.jpg')
+              center/cover
+              no-repeat
+              fixed;
+  font-family: var(--fontfam);
+  overflow-x: hidden;
+  color: var(--main-text-color);
+}
+
+a { color: var(--main-text-color); text-shadow: 2px -2px #0E131F; }
+
+/* Scrollbar */ 
+body::-webkit-scrollbar { width: 1rem; }
+body::-webkit-scrollbar-track { background: #131112; }
+body::-webkit-scrollbar-thumb {
+  background-color: #606060;
+  border-radius: .3rem;
+}
+body::-webkit-scrollbar-thumb:hover { background-color: #454545; }
+
+p,label {
+  text-shadow: 1px 1px #131112;
+}
+
+section {
+  box-shadow: 0px 0px 10px 5px #0E131F;
+  background-color: #1A4F70;
+}
+
+section h1 {
+  text-align: center;
+}
+
+/* section h1 {
+  text-align: center;
+  font-size: calc(25px + (65 - 25) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+  text-shadow: 2px 3px #131112;
+  margin: 0;
+  margin-bottom: calc(30px + (40 - 30) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+} */
+
+/*Navbar*/
+
+
+
+/*Welcome Header*/
+
+
+
+/*Contact Styling*/
+.contact {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 5vh;
+  right: 1vw;
+  z-index: 100;
+}
+
+.contact-tile {
+  margin-right: 1rem;
+}
+
+
+.contact img {
+  filter: brightness(4);
+  padding: calc(10px + (20 - 10) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport)))) 0;
+  width: calc(20px + (50 - 20) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+}
+
+
+/*Project Styling*/
+
+
+/* About Me */
+
+
+
+
+/* Certificate Section Containers */
+
+
+
+/* Built By */
+

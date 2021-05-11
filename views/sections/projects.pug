@@ -1,0 +1,19 @@
+section#projects.container-fluid.px-4.py-4
+  h1.pb-4.text-center Some of my projects
+  .projects-container.row.row-cols-auto.justify-content-center
+    each item in pugData.projects
+      .project-tile.col
+        .project-links
+          a.link-project( title="Link to project!" href=item.projectURL )
+            img( src='./images/project-icons/link.svg' alt='Project Link')
+          a.link-tech(href=item.githubURL target='_blank')
+            img(src='./images/project-icons/github.svg' alt='Github Link')
+          //a.link-type(href='placeholder.link' target='_blank')
+            img(src='./images/project-icons/folder.svg' alt='type of project')
+        label=item.title
+        a.project-preview(href=item.projectURL)
+          img(src=item.previewURL alt=item.previewAlt)
+        p.project-info=item.description
+        .project-tech
+          each tech in item.tech
+            label=tech

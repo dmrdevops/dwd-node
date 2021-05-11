@@ -1,0 +1,98 @@
+#certificates {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: fit-content;
+}
+
+#stretch {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--cert-and-triangle-color);
+  z-index: 4;
+  border-radius: 2px;
+  flex-grow: 1;
+  padding-top: calc(40px + (90 - 40) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+  padding-bottom: 2rem;
+  margin-top: -1px;
+}
+
+#triangle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2px;
+  width: 100%;
+  height: 33.6vw;
+  background-color: var(--cert-and-triangle-color);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+#certificates::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 5vw;
+  width: 100vw;
+  bottom: 0;
+}
+
+.certificate-master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 100%;
+}
+
+.certificate-container {
+  display: flex;
+  justify-content: center;
+  max-width: 85%;
+  flex-wrap: wrap;
+  padding: calc(10px + (40 - 10) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))))
+           calc(10px + (40 - 10) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+  border: 1px solid whitesmoke;
+  background-color: #111318;
+  border-radius: 2rem;
+  box-shadow: inset 0px 0px 3px 2px whitesmoke,
+              inset 0px 0px 5px 2px white;
+}
+
+.certificate {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  
+  margin: calc(5px + (20 - 5) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))))
+          calc(10px + (40 - 10) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+}
+
+.tech-logo {
+  display: flex;
+  align-items: center;
+  width: 7.25vw;
+  height: 7.25vw;
+  min-width: 75px;
+  min-height: 75px;
+  object-fit: contain;
+}
+
+.certificate-container label {
+  text-align: center;
+  margin-top: calc(5px + (40 - 5) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+  font-size: calc(12px + (40 - 12) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+}
+
+.tech-logo > img {
+  width: 100%;
+  backface-visibility: hidden;
+}

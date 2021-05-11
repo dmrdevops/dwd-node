@@ -1,0 +1,17 @@
+section#certificates
+  #stretch
+    .certificate-master
+      h1 Technologies and Services I&apos;ve Worked With
+      .certificate-container
+        #certModal.modal
+          img#display-cert.modal-content
+        each item in pugData.certs
+          .certificate.cert-active
+            .tech-logo
+              img(src=item.imgSrc alt=item.title data-active=item.active data-certSrc=item.certSrc)
+            label=item.title
+  #triangle
+    footer
+      p Designed and built by
+      img#logo(src='/images/dwd.png')
+  
