@@ -1,0 +1,84 @@
+@import "../node_modules/rfs/scss";
+
+#welcome { 
+  background-color: #ffffff00;
+}
+
+#backing {
+  position: fixed;
+  width: 100vw;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.650);
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: 0;
+}
+
+#header-group {
+  color: var(--main-text-color);
+  font-family: 'bungee shade', cursive;
+  font-weight: 400;
+  text-shadow: -4px 3px #131112; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+/*   transform: rotate3d(1, 1, 0, -20deg); */
+}
+
+
+#intro {
+  color: white;
+  @include font-size(8rem);
+  /* margin-bottom: calc(250px + (400 - 250) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport)))); */
+/*   top: calc(-50px + (2754 - -50) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+  left: 50%; */
+  font-family: 'Exo 2';
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#subheading {
+  @include font-size(2rem);
+/*   margin: 2rem 0 0 0; */
+/*   bottom: 30%;
+  left: 50%; */
+/*   margin-top: 20px; */
+/* @include rfs(30rem, width); */
+width: calc(300px + (450 - 300) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+font-family: 'Exo 2'
+}
+
+
+#DWD, #DWD2, #DWD3 {
+  line-height: 100%;
+  display: flex;
+  color: #209cee;
+  @include font-size(14rem);
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%)
+  
+}
+
+
+#DWD {
+  transform: translate(-4px, -49%);
+}
+
+#DWD3 {
+  transform: translate(-4px, -51%);
+}
+
+#DWD2 {
+  color: #CCA43B;
+}
+
+#W, #W2, #W3 {
+  padding: 0 1rem
+}

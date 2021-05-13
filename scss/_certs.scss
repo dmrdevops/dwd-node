@@ -1,3 +1,5 @@
+@import "../node_modules/rfs/scss";
+
 #certificates {
   display: flex;
   flex-direction: column;
@@ -71,7 +73,7 @@
   font-size: 2rem;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
   margin: calc(5px + (20 - 5) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))))
           calc(10px + (40 - 10) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
 }
@@ -89,10 +91,22 @@
 .certificate-container label {
   text-align: center;
   margin-top: calc(5px + (40 - 5) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
-  font-size: calc(12px + (40 - 12) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+  @include font-size(1.25rem);
 }
 
 .tech-logo > img {
   width: 100%;
   backface-visibility: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  #certificates h1 {
+    padding: 0 1rem!important;
+  }
+
+  .certificate-container {
+    justify-content: space-around;
+    padding: 2rem 1rem!important;
+  }
+
 }

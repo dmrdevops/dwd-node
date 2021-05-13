@@ -1,19 +1,19 @@
-section#projects.container-fluid.px-4.py-4
+section#projects.container-fluid.px-4.py-5
   h1.pb-4.text-center Some of my projects
-  .projects-container.row.row-cols-auto.justify-content-center
+  .projects-container.row.row-cols-auto.gap-5.justify-content-center.pb-4
     each item in pugData.projects
-      .project-tile.col
+      .project-tile.col.gap-1.rounded
         .project-links
-          a.link-project( title="Link to project!" href=item.projectURL )
-            img( src='./images/project-icons/link.svg' alt='Project Link')
-          a.link-tech(href=item.githubURL target='_blank')
-            img(src='./images/project-icons/github.svg' alt='Github Link')
+          a.link-project.mx-2( title="Link to project!" href=item.projectURL )
+            img( src='./images/project-icons/link.svg' alt='Project Link').img-fluid
+          a.link-tech.mx-2(href=item.githubURL target='_blank')
+            img(src='./images/project-icons/github.svg' alt='Github Link').img-fluid
           //a.link-type(href='placeholder.link' target='_blank')
             img(src='./images/project-icons/folder.svg' alt='type of project')
-        label=item.title
+        label.mb-2.d-flex.justify-content-center.align-items-center.text-center=item.title
         a.project-preview(href=item.projectURL)
-          img(src=item.previewURL alt=item.previewAlt)
-        p.project-info=item.description
-        .project-tech
+          img(src=item.previewURL alt=item.previewAlt).img-fluid
+        p.project-info.mt-3=item.description
+        .project-tech.d-flex
           each tech in item.tech
             label=tech

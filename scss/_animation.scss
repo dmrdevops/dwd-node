@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --nav-duration: .7s;
   --navline-duration: .7s;
   --subheader-duration: .5s;
@@ -26,39 +26,7 @@
   animation: scale-in-center var(--nav-duration) cubic-bezier(0.250, 0.460, 0.450, 0.940) both; 
 }
 
-.slide-in-left {
-	-webkit-animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
 
-@keyframes slide-in-left {
-  0% {
-    -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.slide-in-right {
-	-webkit-animation: slide-in-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
 
 .slide-in-bottom {
@@ -95,10 +63,6 @@
 
 
 
-.contact {
-  animation: slide-in-right var(--contact-duration) cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation-delay: var(--contact-delay);
-}
 
 
-
+ */

@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "test",
-    "start": "nodemon"
+    "start": "nodemon -e js,html,pug,css"
   },
   "author": "!DMR",
   "license": "ISC",

@@ -3,19 +3,21 @@ const navbar = document.getElementById("navbar");
 const navHeight = navbar.clientHeight;
 const welcome = document.getElementById("welcome");
 const chevron = document.querySelector(".chevron");
-const subheading = document.getElementById('subheading')
 const typewriter = document.querySelector('.typewriter')
+const dwd = document.getElementById('DWD');
+const dwd2 = document.getElementById('DWD2');
+const dwd3 = document.getElementById('DWD3');
+const flicker = document.querySelector('.flicker')
+const intro = document.getElementById('intro')
+const headerGroup = document.getElementById('header-group')
 
-// Change navbar opacity when scrolled out of welcome section
-/* const changeOpacity = () => {
-  const windowHeight = window.innerHeight; //Viewport height
-  const scrollPosition = window.scrollY; //Viewport scroll height
-  if(scrollposition >= windowHeight - navHeight) {
-    navbar.style.backgroundColor = "#131112";
-  } else {
-    navbar.style.backgroundColor = "#1311128a";
-  }
-}; */
+dwd2.onanimationend = (e) => {
+  if(e.animationName === 'flicker-last') {
+    headerGroup.style.display = 'none';
+    intro.style.display = 'flex'
+  } 
+}
+
 
 // Listen for page load and create an observer on viewport
 window.addEventListener('load', (event) => createObserver(), false);
@@ -31,13 +33,12 @@ let rootObserver = new IntersectionObserver(rootIntersect, optionRoot);
 rootObserver.observe(welcome);
 }
 function rootIntersect(entries, rootObserver) {
-  entries.forEach(entry => {
+  entries.forEach(entry => { 
     if(!entry.isIntersecting) {
 /*       navbar.style.top = "0";
       navbar.style.position = "fixed";
       navbar.style.backgroundColor = "#131112"; */
       chevron.style.display = "flex";
-
    } else {
 /*     navbar.style.backgroundColor = "#1311128a";
     navbar.style.position = "sticky";
@@ -48,12 +49,12 @@ function rootIntersect(entries, rootObserver) {
 };
 
 
-window.addEventListener('resize', typeWidth());
+/* window.addEventListener('resize', typeWidth());
 function typeWidth() {
   const shWidth = window.getComputedStyle(subheading, null).width
   typewriter.style.width = shWidth
   console.log(shWidth)
-}
+} */
 
 
 // Modal

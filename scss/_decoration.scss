@@ -1,8 +1,10 @@
+@import "../node_modules/rfs/scss";
+
 #triangle > footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(5px + (40 - 5) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport))));
+  @include font-size(1.25rem);/* calc(5px + (40 - 5) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport)))); */
   padding: 0;
 }
 
@@ -63,4 +65,10 @@ footer {
   text-align: center;
   font-size: 1.3rem;
   padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 400px) {
+  footer p {
+    margin-bottom: 0rem
+  }
 }

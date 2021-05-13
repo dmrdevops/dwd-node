@@ -1,0 +1,49 @@
+@import "../node_modules/rfs/scss";
+
+.contact {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 1rem;
+  right: 0;
+  z-index: 100;
+  animation: slide-in-right var(--contact-duration) cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: var(--contact-delay);
+}
+
+.contact-tile {
+  margin-right: 1.5rem;
+}
+
+.contact img {
+  filter: brightness(4);
+  /* padding: calc(10px + (20 - 10) * ((100vw - var(--calc-minPix)) / (var(--calc-maxViewport) - var(--calc-minViewport)))) 0; */
+/*   width: 50px; */
+}
+
+@media only screen and (min-width: 2000px) {
+  .contact img {
+    min-width: 45px;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    z-index: 0;
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .contact-tile {
+    margin: 0 1.5rem;
+  }
+
+  .contact img {
+    width: 40px;
+  }
+
+}
