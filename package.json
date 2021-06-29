@@ -1,24 +1,28 @@
 {
   "name": "develop-with-derek",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "personal-portfolio",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
+    "dev": "nodemon --ignore public",
+    "sass-comp": "sass -w sass/precompiled/main.scss:public/main.css",
     "test": "test",
-    "start": "nodemon"
+    "start": "node app.js"
   },
-  "author": "!DMR",
+  "author": "Derek M. Robertson",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^9.0.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "multer": "^1.4.2",
     "pug": "^3.0.2",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
     "nodemon": "^2.0.7",
-    "rfs": "^9.0.3",
-    "sass": "^1.32.12"
+    "rfs": "^9.0.4",
+    "sass": "^1.35.1"
   }
 }

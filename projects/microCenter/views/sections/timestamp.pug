@@ -1,0 +1,13 @@
+.container
+  Timestamp Microservice
+  h3 Example Usage: 
+  ul 
+    li
+      a(href="timestamp/1992-07-08") [project url]/api/1992-07-08
+      a(href="timestamp/710553600000") [project url]/api/7105536000
+  h3 Example Output: 
+  p 
+    code {"unix":710553600000, "utc":"Wed, 08 Jul 1992 00:00:00 GMT"}
+  form(action='timestamp' method='post')
+    input(type="text" name='date')
+    button(type='submit' value='Submit') Value
