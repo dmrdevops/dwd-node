@@ -1,11 +1,10 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
-const favicon = require('serve-favicon')
-const path = require('path')
+const favicon = require("serve-favicon");
+const path = require("path");
 
-const certs = require('./certList')
-const projects = require('./projectsList');
-
+const certs = require("./refs/certList");
+const projects = require("./refs/projectsList");
 
 const app = express();
 
@@ -18,51 +17,33 @@ app.use(express.json());
 app.set("views", "./views");
 app.set("view engine", "pug");
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
+//! REMOVE BEFORE PRODUCTION  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+app.use("/", express.static(__dirname + "/public"));
+//! REMOVE BEFORE PRODUCTION  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-//REMOVE BEFORE PRODUCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-app.use('/', express.static(__dirname + "/public"));
-
-const livereload = require('livereload');
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, '/public'));
-//Doesn't work...
-//liveReloadServer.watch(path.join(__dirname, '/projects/microCenter/public'));
-const connectLivereload = require("connect-livereload");
-app.use(connectLivereload());
-
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
-});
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-const pugData = { 
+const pugData = {
   projects: projects.module,
-  certs: certs.module
-}
+  certs: certs.module,
+};
 
 app.get("/", (req, res) => {
   res.render("index", { pugData });
 });
 
-
-
 //Sub App routing
 //Conditional requiring based on if app is present in folder structure. Better way to do this?
-if(Object.keys(require('./projects/microCenter/microcenter')).length === 0) {
-  app.get('/projects/microcenter', (req, res) => {
-    res.send('Microcenter is currently under maintenance!')
-  })
+if (Object.keys(require("./projects/microCenter/microcenter")).length === 0) {
+  app.get("/projects/microcenter", (req, res) => {
+    res.send("Microcenter is currently under maintenance!");
+  });
 } else {
-  const microcenter = require('./projects/microCenter/microcenter');
-  app.use('/projects/microcenter', microcenter);
+  const microcenter = require("./projects/microCenter/microcenter");
+  app.use("/projects/microcenter", microcenter);
 }
-//////////////////////////////////////////////////////////////////////////////////////////////
+
+// TODO Look into this
 /* console.log(process.env.NODE_ENV)
 
 if (process.env.NODE_ENV === "development") {
@@ -75,14 +56,13 @@ if(['production', 'staging'].indexOf(process.env.NODE_ENV) >= 0) {
   console.log('staging')
 } */
 
-
+// TODO Create actual 404 page and see if I can limit compared to nginx
 app.get("*", (req, res, next) => {
   res.status(200).send("Page not found11");
   next();
 });
 
-app.listen(8080, () =>
-  console.log('\\\\🟢 Listening on port 8080')
-);
+//TODO Do I need it listening on port 8080?
+app.listen(8080, () => console.log("\\\\🟢 Listening on port 8080"));
 
 module.exports = app;

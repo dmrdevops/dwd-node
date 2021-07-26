@@ -1,0 +1,24 @@
+@import '../base/variables';
+
+.tv-effect {
+  animation: 1s 3s tv-effect both;
+}
+
+@keyframes tv-effect {
+  0% {
+    width: 100vw;
+    height: 100vh;
+  }
+  50% {
+    width: 100vw;
+    height: 1vh;
+  }
+  75% {
+    background-color: white;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}

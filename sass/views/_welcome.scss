@@ -1,0 +1,27 @@
+@import '../base/variables';
+@import '../../node_modules/rfs/scss';
+
+#heading-group {
+  text-shadow: -2px 4px #131112;
+  position: fixed;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#intro {
+  @include rfs(8rem);
+  @include margin-bottom(1rem)
+}
+
+#subheading {
+  @include rfs(2.5rem);
+  @include margin-top(2rem);
+  white-space: nowrap;
+}
+//////
+
+
+
+
+/*# sourceMappingURL=2.welcome.css.map */

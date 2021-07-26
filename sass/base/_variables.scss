@@ -1,0 +1,37 @@
+@import './imports';
+
+// Animations
+$roll-left-dur: 0.55s;
+$roll-right-dur: 0.55s;
+$merge-duration: 0.5s;
+$merge-delay: .65s;
+$flicker-dur: .3s;
+$flicker-delay: 2.4s;
+$flicker-top-dur: .6s;
+$flicker-top-delay: 1.3s;
+$flicker-bot-dur: .8s;
+$flicker-bot-delay: 1.5s;
+$flicker-last-dur: 1s;
+$flicker-last-delay: 2.4s;
+$slide-in-dur: .06s;
+$slide-in-delay: .4s;
+$slide-out-left-dur: .5s;
+$slide-out-left-delay: 3s;
+$scale-in-center-dur: .6s;
+$scale-in-center-delay: 0s;
+
+// Colors
+$mainFontColor: whitesmoke;
+$projectSectColor: #222831;
+$aboutMeSectColor: linear-gradient(90deg, rgba(75,77,80,1) 10%, rgb(50, 53, 59) 35%);
+$triangleSectColor: #222831;
+
+// Fonts
+$mainFontFam: "Exo 2", sans-serif;
+$pFontSize: 2.25rem;
+$maxViewport: 3860;
+$minViewport: 250;
+$minPix: 250px;
+$sectionPadding: calc(50px + (80 - 50) * ((100vw - $minPix) / ($maxViewport - $minViewport)))
+                 calc(20px + (20 - 20) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
+

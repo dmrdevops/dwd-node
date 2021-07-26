@@ -4,8 +4,7 @@
   "description": "personal-portfolio",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon --ignore public",
-    "sass-comp": "sass -w sass/precompiled/main.scss:public/main.css",
+    "dev": "concurrently \"nodemon --ignore public\" \"sass -w sass/index.scss:public/style.css\" \"browser-sync start --proxy localhost:8080 --files *\" ",
     "test": "test",
     "start": "node app.js"
   },

@@ -1,0 +1,22 @@
+@import '../base/variables';
+
+.contact {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 5vh;
+  right: 1vw;
+  z-index: 100;
+}
+
+.contact-tile {
+  margin-right: 1rem;
+}
+
+.contact img {
+  filter: brightness(4);
+  padding: calc(10px + (20 - 10) * ((100vw - $minPix) / ($maxViewport - $minViewport))) 0;
+  width: calc(20px + (50 - 20) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
+}

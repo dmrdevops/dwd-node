@@ -2,9 +2,9 @@ doctype html
 html
   include ./head.pug
   body#home.font-weight-normal.vw-100
-    #header-group.container-fluid.d-flex.flex-column.justify-content-center.align-items-center
-      h1#intro.text-center Hello, I&apos;m Derek!
-      p#subheading.typewriter.text-center I build and design websites 
+    include ./components/navbar.pug
+    include ./components/contact.pug
+    include ./sections/dwd.pug
     include ./sections/welcome.pug
     include ./sections/projects.pug
     include ./sections/aboutme.pug 

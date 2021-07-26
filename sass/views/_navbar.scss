@@ -8,11 +8,16 @@ nav {
   }
 }
 
+nav {
+  z-index: 4 !important;
+}
+
 #brand {
   font-family: "Bungee Shade", cursive;
   font-size: calc(1.35rem + 1.2vw);
   padding: 0;
 }
+
 @media (min-width: 1200px) {
   #brand {
     font-size: 2.25rem;

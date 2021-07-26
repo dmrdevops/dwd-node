@@ -1,0 +1,107 @@
+@import '../base/variables';
+@import '../../node_modules/rfs/scss';
+
+#certificates {
+  height: fit-content;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#stretch {
+  flex-grow: 1;
+  width: 100vw;
+  z-index: 4;
+  @include padding(2em 0);
+  margin-top: -1px;
+
+  background-color: $triangleSectColor;
+  border-radius: 2px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+#triangle {
+  flex-shrink: 0;
+  width: 100%;
+  height: 33.6vw;
+  position: relative;
+  z-index: 1;
+  margin-top: -2px;
+  
+  background-color: $triangleSectColor;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#certificates::after {
+  height: 5vw;
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  content: "";
+  display: block;
+}
+
+.certificate-master {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificate-container {
+  max-width: 85%;
+  @include padding(2rem);
+
+  border: 1px solid whitesmoke;
+  background-color: #111318;
+  border-radius: 2rem;
+  box-shadow: inset 0px 0px 3px 2px whitesmoke,
+              inset 0px 0px 5px 2px white;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.certificate {
+  @include margin(1rem 2rem);
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tech-logo {
+  width: 7.25vw;
+  height: 7.25vw;
+  min-width: 75px;
+  min-height: 75px;
+  
+  display: flex;
+  align-items: center;
+  object-fit: contain;
+}
+
+.certificate-container label {
+  max-width: min-content;
+  @include margin-top(1em);
+  @include rfs(1.6rem);
+}
+
+.tech-logo > img {
+  width: 100%;
+  backface-visibility: hidden;
+}
