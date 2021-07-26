@@ -1,4 +1,5 @@
 @import '../base/variables';
+@import '../../node_modules/rfs/scss';
 
 .contact {
   position: fixed;
@@ -17,6 +18,6 @@
 
 .contact img {
   filter: brightness(4);
-  padding: calc(10px + (20 - 10) * ((100vw - $minPix) / ($maxViewport - $minViewport))) 0;
-  width: calc(20px + (50 - 20) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
+  @include padding(.5rem);
+  @include rfs(3rem, width)
 }

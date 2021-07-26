@@ -47,5 +47,9 @@ section {
 }
 
 section h1 {
+  @include margin-bottom(2rem);
+  @include rfs(3rem);
   text-align: center;
+
 }
+

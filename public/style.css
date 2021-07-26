@@ -85,9 +85,21 @@ section {
 }
 
 section h1 {
+  margin-bottom: calc(1.325rem + 0.9vw);
+  font-size: calc(1.425rem + 2.1vw);
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  section h1 {
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  section h1 {
+    font-size: 3rem;
+  }
+}
 .roll-in-left {
   -webkit-animation: 0.55s roll-in-left ease-out both;
   animation: 0.55s roll-in-left ease-out both;
@@ -624,10 +636,15 @@ nav {
 
 .contact img {
   filter: brightness(4);
-  padding: calc(10px + (20 - 10) * ((100vw - $minPix) / ($maxViewport - $minViewport))) 0;
-  width: calc(20px + (50 - 20) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
+  padding: 0.5rem;
+  width: calc(1.425rem + 2.1vw);
 }
 
+@media (min-width: 1200px) {
+  .contact img {
+    width: 3rem;
+  }
+}
 .dwd-container {
   height: 100vh;
   width: 100vw;
@@ -810,58 +827,58 @@ nav {
 }
 
 #about-me-container {
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 30vw 70vw;
-  grid-template-rows: 80px 1fr;
-  grid-template-areas: "img title" "img description";
-  column-gap: 2rem;
+  max-width: 100%;
+  display: flex;
   align-items: center;
-  z-index: 1;
+}
+
+.img-container {
+  /*  max-width: 100%;
+   height: auto; */
 }
 
 #me-img {
-  border-radius: 50%;
-  grid-area: img;
-  width: 90%;
   max-width: 500px;
-  justify-self: center;
+  height: auto;
+  border-radius: 50%;
   box-shadow: 0px 0px 5px 1px #131112;
 }
 
-#about-me h1 {
-  margin: 0;
-  grid-area: title;
-  text-align: left;
-  width: fit-content;
+.about-me-description {
+  align-self: center;
+  margin: calc(1.325rem + 0.9vw) calc(1.525rem + 3.3vw);
+  padding: calc(1.325rem + 0.9vw);
+  background-color: #222831;
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-#about-me p {
-  margin: 0;
-  font-size: calc(10px + (25 - 10) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
-  line-height: 1.8;
-  max-width: 50vw;
-  grid-area: description;
+@media (min-width: 1200px) {
+  .about-me-description {
+    margin: 2rem 4rem;
+  }
 }
-
+@media (min-width: 1200px) {
+  .about-me-description {
+    padding: 2rem;
+  }
+}
 @media (max-width: 1024px) {
   #about-me-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  #about-me p {
-    margin-top: 2.5rem;
-    max-width: 90%;
-    line-height: 1.6rem;
+  .about-me-description {
+    margin: calc(1.325rem + 0.9vw) 0;
+    padding: 1rem;
   }
-
-  #me-img {
-    max-width: 400px;
-    margin-top: 3rem;
+}
+@media (max-width: 1024px) and (min-width: 1200px) {
+  .about-me-description {
+    margin: 2rem 0;
   }
 }
 #certificates {
