@@ -20,7 +20,7 @@ app.set("view engine", "pug");
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 //! REMOVE BEFORE PRODUCTION  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-app.use("/", express.static(__dirname + "/public"));
+/* app.use("/", express.static(__dirname + "/public")); */
 //! REMOVE BEFORE PRODUCTION  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 const pugData = {
