@@ -1,0 +1,47 @@
+@import '../base/variables';
+@import '../../node_modules/rfs/scss';
+
+.dwd-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+
+  background-color: #090909;
+  font-family: 'bungee shade', cursive;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dwd-subcontainer {
+  position: fixed;
+  top: 50%;
+
+  color: #209cee;
+  @include rfs(16rem);
+  line-height: 100%;
+
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.dwd-subcontainer:nth-child(1) {
+  transform: translate(-4px, -49%);
+}
+
+.dwd-subcontainer:nth-child(2) {
+    color: #CCA43B;
+}
+
+.dwd-subcontainer:nth-child(3) {
+  transform: translate(-4px, -51%);
+}
+
+.dwd-subcontainer div:nth-child(2) {
+  padding: 0 1rem
+}
+

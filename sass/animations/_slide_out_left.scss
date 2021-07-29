@@ -1,0 +1,31 @@
+@import '../base/variables';
+
+.slide-out-left {
+	-webkit-animation: $slide-out-left-dur slide-out-left $slide-out-left-delay cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: $slide-out-left-dur slide-out-left $slide-out-left-delay cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-1000px, -50%);
+            transform: translate(-1000px, -50%);
+    opacity: 0;
+  }
+}

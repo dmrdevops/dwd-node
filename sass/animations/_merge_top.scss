@@ -1,0 +1,35 @@
+@import '../base/variables';
+
+.merge-top {
+	-webkit-animation: $merge-duration merge-top ease-out both, 1s flickertop 2s linear both;
+	        animation: $merge-duration merge-top $merge-delay ease-out both ,
+                     $flicker-top-dur flicker $flicker-top-delay linear both;  
+
+}
+
+@keyframes merge-top {
+  0% {
+    -webkit-transform: translate(-6px, 48.5%);
+    transform: translate(-4px, -49%)
+    
+
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-150%);
+
+  }
+}
+
+@-webkit-keyframes merge-top {
+  0% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); 
+    opacity: 1;
+  }
+}

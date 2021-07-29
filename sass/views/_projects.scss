@@ -1,0 +1,117 @@
+@import '../../node_modules/rfs/scss.scss';
+@import '../base/variables';
+
+#projects {
+  background-color: $projectSectColor;
+/*   position: relative;
+  z-index: 1; */
+  @include padding($sectionPadding 0);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.projects-container {
+  display: flex;
+  margin: auto;
+}
+
+.project-tile {
+
+  width: 325px;
+  @include margin(1rem);
+  @include padding(1rem);
+
+  @include rfs(.5rem, row-gap);
+  background-color: #606060;
+  box-shadow: 0 0 6px black;
+  border-radius: 0.4rem;
+
+  display: grid;
+  grid: [row1-start] "link type" min-content [row1-end]
+        [row2-start] "title title" 80px [row2-end]
+        [row3-start] "pic pic" auto [row3-end]
+        [row4-start] "info info" auto [row4-end]
+        [row5-start] "tech tech" min-content [row5-end]
+        /1fr auto;
+
+
+  .project-links {
+  grid-area: link;
+  display: flex;
+  width: 100%;
+
+  a {
+    @include margin-left(1rem);
+  }
+
+  a > img {
+    @include rfs(40px, width);
+  }
+
+  /* .link-type {
+  grid-area: type;
+} */
+
+/* .link-type img {
+  width: calc(30px + (50 - 30) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
+} */
+}
+
+  > label { // Project Tile Label
+    @include font-size(1.5rem);
+    grid-area: title;
+    align-self: center;
+    text-align: center;
+  }
+
+  .project-preview {
+    grid-area: pic;
+    display: flex;
+    height: 150px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0px 0px 6px 2px black;
+    }
+  }
+
+  .project-info {
+  
+  grid-area: info;
+  align-self: center;
+  @include margin(1rem 0);
+}
+
+.project-tech {
+  display: flex;
+  width: 100%;
+  grid-area: tech;
+  justify-content: flex-end;
+    label {
+      @include margin-right(.5rem);
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .projects-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start !important;
+    overflow-x: scroll;
+
+    :first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+/*# sourceMappingURL=3.projects.css.map */
