@@ -107,29 +107,42 @@
   }
   79.9% {
     opacity: 1;
+    color: #CCA43B;
   }
-  80% {
+/*   81% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  } */
+  83% {
+    opacity: 1;
+   color: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+/*   84.9% {
     opacity: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  89.8% {
+    85% {
     opacity: 1;
     color: #209cee;
     -webkit-box-shadow: none;
             box-shadow: none;
-  }
-  89.9% {
+  } */
+  86.2% {
     opacity: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
+    color: white;
   }
-  90% {
+/*   90% {
     opacity: 1;
     color: #CCA43B;
     -webkit-box-shadow: none;
             box-shadow: none;
-  }
+  } */
   100% {
     opacity: 0;
   }

@@ -32,16 +32,6 @@ app.get("/", (req, res) => {
   res.render("index", { pugData });
 });
 
-//Sub App routing
-//Conditional requiring based on if app is present in folder structure. Better way to do this?
-if (Object.keys(require("./projects/microCenter/microcenter")).length === 0) {
-  app.get("/projects/microcenter", (req, res) => {
-    res.send("Microcenter is currently under maintenance!");
-  });
-} else {
-  const microcenter = require("./projects/microCenter/microcenter");
-  app.use("/projects/microcenter", microcenter);
-}
 
 // TODO Look into this
 /* console.log(process.env.NODE_ENV)

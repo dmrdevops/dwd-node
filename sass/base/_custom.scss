@@ -1,6 +1,17 @@
 // Dimensions
 
-.full-vp {
-  height: 100vh;
-  width: 100vw;
+.flex-col-aligncenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.one-col {
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

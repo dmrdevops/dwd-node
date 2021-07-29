@@ -1,5 +1,5 @@
 const projectsList = [
-  {
+/*   {
     title: "API Microcenter",
     linkTypes: ["Project Link", "Github Project Link"],
     projectURL: "/projects/microcenter",
@@ -9,14 +9,14 @@ const projectsList = [
     description:
       "A compilation of various REST API's modified to return data from server without refreshing page.",
     tech: ["NodeJS", "ExpressJS", "Sass", "Pug"],
-  },
+  }, */
   {
     title: "React Drum Kit",
     linkTypes: ["Project Link", "Github Project Link"],
     projectURL: "/projects/react-drum-kit",
     githubURL: "https://github.com/dmrdevops/react-drum-kit",
     previewAlt: "React Drum Kit Preview",
-    previewURL: "",
+    previewURL: "https://repository-images.githubusercontent.com/345435758/e6fb03d1-31e6-4772-9807-46b95c42b6a3",
     description: "A drum machine built with ReactJS",
     tech: ["JSX", "SCSS"],
   },

@@ -1,8 +1,8 @@
-section#projects.container-fluid.px-4.py-4
-  h1.pb-4.text-center Some of my projects
-  .projects-container.row.row-cols-auto.justify-content-center
+section#projects
+  h2 Some of my projects
+  .projects-container
     each item in pugData.projects
-      .project-tile.col
+      .project-tile
         .project-links
           a.link-project( title="Link to project!" href=item.projectURL )
             img( src='./images/project-icons/link.svg' alt='Project Link')

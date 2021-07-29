@@ -4,15 +4,18 @@
 html {
   min-height: 100vh;
   width: 100%;
+  
 }
 
 body {
   height: inherit;
-
-  background: linear-gradient(90deg, rgba(0,0,0,0.16288522244835435) 0%, rgba(0,0,0,0.26652667903098737) 27%, rgba(0,0,0,0.437395026369923) 63%), url("../images/main-background.jpg") center/cover no-repeat fixed;
+  width: inherit;
+  
+  //background-color: #090909;
   color: $mainFontColor;
   font-family: $mainFontFam;
-  overflow-x: hidden;
+  @include font-size(1rem);
+  //overflow-x: hidden;
 }
 
 a {
@@ -42,14 +45,21 @@ p, label {
 }
 
 section {
-  box-shadow: 0px 0px 10px 5px #0E131F;
-  @include padding(2em);
+/*   box-shadow: 0px 0px 10px 5px #0E131F;
+   */
+  @include padding(3em);
 }
 
-section h1 {
+section h2 {
+  width: 100%;
   @include margin-bottom(2rem);
-  @include rfs(3rem);
+/*   @include padding(0 2rem); */
+  @include font-size(3rem);
   text-align: center;
-
 }
 
+@media (max-width: 768px) {
+  section {
+    @include padding(1.25em);
+  }
+}

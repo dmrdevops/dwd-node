@@ -2,19 +2,19 @@ const certificates = [
   {
     title: 'HTML5',
     imgSrc: '/images/tech/html5.svg',
-    certSrc: '/images/certs/web-cert.png',
+    certSrc: '/images/certs/web_cert.png',
     active: true
   },
   {
     title: 'CSS',
     imgSrc: '/images/tech/css3.svg',
-    certSrc: '/images/certs/web-cert.png',
+    certSrc: '/images/certs/web_cert.png',
     active: true
   },
   {
     title: 'JS',
     imgSrc: '/images/tech/javascript.svg',
-    certSrc: '/images/certs/js-cert.png',
+    certSrc: '/images/certs/js_cert.png',
     active: true
   },
   {
@@ -26,13 +26,13 @@ const certificates = [
   {
     title: 'Sass',
     imgSrc: '/images/tech/sass.svg',
-    certSrc: '/images/certs/front-end-cert.png',
+    certSrc: '/images/certs/front_end_cert.png',
     active: true
   },
   {
     title: 'Bootstrap',
     imgSrc: '/images/tech/bootstrap.svg',
-    certSrc: '/images/certs/front-end-cert.png',
+    certSrc: '/images/certs/front_end_cert.png',
     active: true
   },
   {
@@ -62,7 +62,7 @@ const certificates = [
   {
     title: 'Node.js',
     imgSrc: '/images/tech/nodejs.svg',
-    certSrc: '/images/certs/api-cert.png',
+    certSrc: '/images/certs/api_cert.png',
     active: true
   }
 ]

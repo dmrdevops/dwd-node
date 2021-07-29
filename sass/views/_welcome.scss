@@ -1,27 +1,36 @@
-@import '../base/variables';
 @import '../../node_modules/rfs/scss';
+@import '../base/variables';
 
-#heading-group {
-  text-shadow: -2px 4px #131112;
-  position: fixed;
-  z-index: -1;
-  top: 50%;
-  transform: translateY(-50%);
+#welcome {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 63%, rgba(0,0,0,0.1) 80%), url("../images/welcome_bg.jpg") center/cover no-repeat fixed;
 }
 
-#intro {
-  @include rfs(8rem);
-  @include margin-bottom(1rem)
+.welcome-container {
+  padding: 0 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-#subheading {
-  @include rfs(2.5rem);
-  @include margin-top(2rem);
-  white-space: nowrap;
+.welcome-content {
+  height: 50%;
+  display: flex;
+
+    h1 {
+    align-self: flex-end;
+    @include margin-bottom(1rem);
+    text-shadow: 2px 2px #131112;
+    @include rfs(10rem);
+  }
+  
+  p {
+    @include margin-top(1rem);
+    @include rfs(3rem);
+  }
 }
-//////
-
-
-
 
 /*# sourceMappingURL=2.welcome.css.map */

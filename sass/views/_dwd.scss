@@ -2,14 +2,14 @@
 @import '../../node_modules/rfs/scss';
 
 .dwd-container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
   top: 50%;
-  z-index: 5;
+  z-index: 10;
   transform: translateY(-50%);
 
-  background-color: #121212;
+  background-color: #090909;
   font-family: 'bungee shade', cursive;
 
   display: flex;

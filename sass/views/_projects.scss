@@ -1,89 +1,105 @@
+@import '../../node_modules/rfs/scss.scss';
 @import '../base/variables';
 
 #projects {
   background-color: $projectSectColor;
-  position: relative;
-  z-index: 1;
+/*   position: relative;
+  z-index: 1; */
+  @include padding($sectionPadding 0);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
 }
 
 .projects-container {
-  grid-gap: 2rem;
+  display: flex;
+  margin: auto;
 }
 
 .project-tile {
-  max-width: 350px;
-  display: grid;
-  grid: [row1-start] "link type" min-content [row1-end] [row2-start] "title title" 80px [row2-end] [row3-start] "pic pic" auto [row3-end] [row4-start] "info info" auto [row4-end] [row5-start] "tech tech" min-content [row5-end]/1fr auto;
-  row-gap: calc(7px + (12 - 7) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
-  column-gap: calc(7px + (20 - 7) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
+
+  width: 325px;
+  @include margin(1rem);
+  @include padding(1rem);
+
+  @include rfs(.5rem, row-gap);
   background-color: #606060;
   box-shadow: 0 0 6px black;
-  padding: calc(10px + (20 - 10) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
   border-radius: 0.4rem;
-}
 
-.project-links {
+  display: grid;
+  grid: [row1-start] "link type" min-content [row1-end]
+        [row2-start] "title title" 80px [row2-end]
+        [row3-start] "pic pic" auto [row3-end]
+        [row4-start] "info info" auto [row4-end]
+        [row5-start] "tech tech" min-content [row5-end]
+        /1fr auto;
+
+
+  .project-links {
   grid-area: link;
   display: flex;
   width: 100%;
-}
 
-.project-links a {
-  margin-right: calc(10px + (20 - 10) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
-}
+  a {
+    @include margin-left(1rem);
+  }
 
-.project-links a > img {
-  width: calc(30px + (45 - 30) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
-}
+  a > img {
+    @include rfs(40px, width);
+  }
 
-.link-type {
+  /* .link-type {
   grid-area: type;
-}
+} */
 
-.link-type img {
+/* .link-type img {
   width: calc(30px + (50 - 30) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
+} */
 }
 
-.project-tile > label {
-  font-size: calc(20px + (32 - 20) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
-  grid-area: title;
-  align-self: center;
-  text-align: center;
-}
+  > label { // Project Tile Label
+    @include font-size(1.5rem);
+    grid-area: title;
+    align-self: center;
+    text-align: center;
+  }
 
-.project-preview {
-  grid-area: pic;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-  height: 150px;
-}
+  .project-preview {
+    grid-area: pic;
+    display: flex;
+    height: 150px;
 
-.project-preview img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0px 0px 6px 2px black;
-}
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0px 0px 6px 2px black;
+    }
+  }
 
-.project-info {
-  font-size: calc(12px + (20 - 12) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
+  .project-info {
+  
   grid-area: info;
   align-self: center;
-  margin: 0;
+  @include margin(1rem 0);
 }
 
 .project-tech {
   display: flex;
   width: 100%;
-  font-size: calc(10px + (15 - 10) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
   grid-area: tech;
-  align-items: flex-end;
+  justify-content: flex-end;
+    label {
+      @include margin-right(.5rem);
+    }
+  }
 }
 
-.project-tech label {
-  margin-right: calc(5px + (10 - 5) * ((100vw - $minPix) / ($maxViewport - $minViewport)));
-}
+
 
 @media (max-width: 768px) {
   .projects-container {
@@ -91,6 +107,10 @@
     flex-wrap: nowrap;
     justify-content: start !important;
     overflow-x: scroll;
+
+    :first-child {
+      margin-left: 0;
+    }
   }
 }
 

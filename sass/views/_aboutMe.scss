@@ -11,31 +11,39 @@
 
 #about-me-container {
   max-width: 100%;
+  margin: 0 auto;
   display: flex;
+  justify-content: center;
   align-items: center;
+
 }
 
 .img-container {
- /*  max-width: 100%;
-  height: auto; */
+  @include margin-right(4rem);
 }
 
 #me-img {
+  flex: 0;
+  width: 100%;
   max-width: 500px;
   height: auto;
-
+  
   border-radius: 50%;
   box-shadow: 0px 0px 5px 1px #131112;
 }
 
 .about-me-description {
+  flex: 1;
   align-self: center;
-  @include margin(2rem 4rem);
+  max-width: 1200px;
+  /* @include margin(2rem auto); */
   @include padding(2rem);
-
+  
   background-color: $projectSectColor;
   border: 2px solid whitesmoke;
   border-radius: 20px;
+  
+  @include font-size(1.3rem);
 
   display: flex;
   flex-direction: column;
@@ -44,11 +52,17 @@
 @media (max-width: 1024px) {
   #about-me-container {
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
   }
   .about-me-description {
     @include margin(2rem 0);
     @include padding(1rem);
+    text-align: justify;
+  }
+
+  .img-container {
+    margin-right: 0;
   }
 }
 
